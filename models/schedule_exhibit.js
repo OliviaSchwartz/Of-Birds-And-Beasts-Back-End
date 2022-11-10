@@ -13,8 +13,22 @@ module.exports = (sequelize, DataTypes) => {
   }
   Schedule_Exhibit.init(
     {
-      schedule_Id: DataTypes.INTEGER,
-      exhibit_Id: DataTypes.INTEGER
+      schedule_Id: {
+        type: DataTypes.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'schedules',
+          key: 'id'
+        },
+        exhibit_Id: {
+          type: DataTypes.INTEGER,
+          onDelete: 'CASCADE',
+          references: {
+            model: 'exhibits',
+            key: 'id'
+          }
+        }
+      }
     },
     {
       sequelize,
