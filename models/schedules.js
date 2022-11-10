@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Schedules.belongsToMany(models.Patrons, {
-        as: 'schedule_exhibits',
+        as: 'schedules',
         through: models.Schedule_Exhibit,
         foreignKey: 'patron_Id'
       })
@@ -19,7 +19,14 @@ module.exports = (sequelize, DataTypes) => {
   Schedules.init(
     {
       date: DataTypes.STRING,
-      patron_Id: DataTypes.INTEGER
+      patron_Id: {
+        type: DataTypes.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'patrons',
+          key: 'id'
+        }
+      }
     },
     {
       sequelize,
