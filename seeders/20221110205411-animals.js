@@ -5,6 +5,7 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     return queryInterface.bulkInsert('animals', [
       {
+
         name: 'Antelope',
         species: 'Bovidae',
         information:
@@ -93,6 +94,7 @@ module.exports = {
         exhibit_Id: 6
     },
     {
+
         name: 'Owl',
         species: 'Tyto Alba',
         information:
@@ -179,8 +181,13 @@ module.exports = {
           'The chicken is a domesticated junglefowl species, with attributes of wild species such as the grey and the Ceylon junglefowl that are originally from Southeastern Asia. Rooster or cock is a term for an adult male bird, and a younger male may be called a cockerel. A male that has been castrated is a capon.',
         image: './chickens.jpg',
         exhibit_Id: 2
+
+      },
+      {
+
         },
         {
+
 
         name: 'Whale Shark',
         species: 'Rhincodon typus',
@@ -292,6 +299,9 @@ module.exports = {
           'Spider monkeys are New World monkeys belonging to the genus Ateles, part of the subfamily Atelinae, family Atelidae. Like other atelines, they are found in tropical forests of Central and South America, from southern Mexico to Brazil. The genus consistes of seven species, all of which are under threat; the brown spider monkey is critically endangered. They are also notable for their ability to be easily bred in captivity.',
         image: './spider-monkey.jpg',
         exhibit_Id: 3
+
+      }
+
       },
       {
         name: 'Tortoise',
@@ -349,12 +359,11 @@ module.exports = {
         image: './komodo.jpg',
         exhibit_Id: 5
       },
+
     ])
   },
 
   async down(queryInterface, Sequelize) {
     return queryInterface.bulkDelete('animals', null, {})
-
-
   }
 }
