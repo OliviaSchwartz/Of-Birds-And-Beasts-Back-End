@@ -9,7 +9,10 @@ const Login = async (req, res) => {
     })
     if (
       patron &&
-      (await middleware.comparePassword(user.passwordDigest, req.body.password))
+      (await middleware.comparePassword(
+        patron.passwordDigest,
+        req.body.password
+      ))
     ) {
       let payload = {
         id: patron.id,
