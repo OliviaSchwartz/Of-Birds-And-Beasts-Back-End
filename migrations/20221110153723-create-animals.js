@@ -16,6 +16,9 @@ module.exports = {
         type: Sequelize.STRING
       },
       information: {
+        type: Sequelize.TEXT
+      },
+      image: {
         type: Sequelize.STRING
       },
       exhibit_Id: {
