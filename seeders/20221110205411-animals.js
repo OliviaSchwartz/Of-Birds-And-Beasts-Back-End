@@ -92,7 +92,8 @@ module.exports = {
           'The chicken is a domesticated junglefowl species, with attributes of wild species such as the grey and the Ceylon junglefowl that are originally from Southeastern Asia. Rooster or cock is a term for an adult male bird, and a younger male may be called a cockerel. A male that has been castrated is a capon.',
         image: './chickens.jpg',
         exhibit_Id: 2
-
+      },
+      {
         name: 'Whale Shark',
         species: 'Rhincodon typus',
         information:
@@ -204,6 +205,62 @@ module.exports = {
         image: './spider-monkey.jpg',
         exhibit_Id: 3
 
+      },
+      {
+        name: 'Tortoise',
+        species: 'Testudinidae',
+        information: 'Like other turtles, tortoises have a shell to protect from predation and other threats. The shell in tortoises is generally hard, and like other members of the suborder Cryptodira, they retract their necks and heads directly backward into the shell to protect them.',
+        image: './turtle.jpg',
+        exhibit_Id: 5
+      },
+      {
+        name: 'king-cobra',
+        species: 'Ophiophagus hannah',
+        information: 'Like most cobras and mambas, the king cobras threat display includes spreading its neck-flap, raising its head upright, puffing, and hissing.',
+        image: './king-cobra.jpg',
+        exhibit_Id: 5
+      },
+      {
+        name: 'pit-viper', 
+        species: 'The Crotalinae',
+        information: 'Like all other vipers, they are venomous. They are distinguished by the presence of a heat-sensing pit organ located between the eye and the nostril on both sides of the head.',
+        image: './pit-viper.jpg',
+        exhibit_Id: 5
+      },
+      {
+        name: 'Legless lizard',
+        species: 'Pygopodidae',
+        information: 'a family of squamates with reduced or absent limbs, and are a type of gecko',
+        image: './legless-lizard.jpg',
+        exhibit_Id: 5
+      },
+      {
+        name: 'chameleon',
+        species: 'Chamaeleonidae',
+        information: 'a distinctive and highly specialized clade of Old World lizards with 202 species',
+        image: './chameleon.jpg',
+        exhibit_Id: 5
+      },
+      {
+        name: 'Burmese Python',
+        species: 'Pythonidae',
+        information: 'not much to be said about this animals except that they can grow up to 11ft long and swallow a full grow human whole',
+        image: './burmese-python.jpg',
+        exhibit_Id: 5
+      },
+      {
+        name: 'Alligator',
+        species: 'Crocodilia',
+        information: 'Adult alligators are black or dark olive-brown with white undersides, while juveniles have bright yellow or whitish stripes which sharply contrast against their dark hides, providing them additional camouflage amongst reeds and wetland grasses',
+        image: './alligator.jpg',
+        exhibit_Id: 5
+      },
+      {
+        name: 'Komodo Dragon',
+        species: 'Varanus komodoensis',
+        information: 'Komodo dragons are apex predators, and dominate the ecosystems in which they live. Komodo dragons hunt and ambush prey including invertebrates, birds, and mammals.',
+        image: './komodo.jpg',
+        exhibit_Id: 5
       }
     ])
   },
