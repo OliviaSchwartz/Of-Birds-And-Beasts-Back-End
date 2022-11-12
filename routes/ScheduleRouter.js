@@ -12,4 +12,4 @@ router.post(
 // router.put('/:schedule_id', controller.UpdatePost)
 // router.delete('/:schedule_id', controller.DeletePost)
 
-// module.exports = router
+module.exports = router
