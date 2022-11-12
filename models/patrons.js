@@ -10,6 +10,10 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Patrons.hasMany(models.Schedules, { foreignKey: 'patron_Id' })
+      Patrons.belongsToMany(models.Schedules, {
+        through: models.schedule_exhibit,
+        foreignKey: 'patron_Id'
+      })
     }
   }
   Patrons.init(
