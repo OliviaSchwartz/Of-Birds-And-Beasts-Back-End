@@ -22,7 +22,12 @@ module.exports = {
         type: Sequelize.STRING
       },
       exhibit_Id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'exhibits',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,
