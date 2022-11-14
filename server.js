@@ -4,6 +4,7 @@ const logger = require('morgan')
 const bodyParser = require('body-parser')
 const AuthRouter = require('./routes/AuthRouter')
 const ScheduleRouter = require('./routes/ScheduleRouter')
+const ExhibitRouter = require('./routes/ExhibitRouter')
 const app = express()
 
 // const AppRouter = require('./routes/AppRouter')
@@ -16,6 +17,7 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use('/auth', AuthRouter)
 app.use('/schedule', ScheduleRouter)
+app.use('/exhibit', ExhibitRouter)
 
 app.get('/', (req, res) => res.json({ message: 'Server Works' }))
 // app.use('/api', AppRouter)
