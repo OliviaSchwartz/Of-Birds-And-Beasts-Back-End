@@ -25,9 +25,10 @@ module.exports = (sequelize, DataTypes) => {
         references: {
           model: 'schedule_exhibit',
           key: 'id'
-        },
-        name: DataTypes.STRING
-      }
+        }
+      },
+      name: DataTypes.STRING,
+      image: DataTypes.STRING
     },
     {
       sequelize,
