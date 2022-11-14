@@ -11,6 +11,15 @@ const GetSchedule = async (req, res) => {
   }
 }
 
+const GetOneSchedule = async (req, res) => {
+  try {
+    const schedule = await Schedules.findByPk(req.params.id)
+    res.send(schedule)
+  } catch (error) {
+    throw error
+  }
+}
+
 const CreateSchedule = async (req, res) => {
   try {
     let { date } = req.body
@@ -23,7 +32,30 @@ const CreateSchedule = async (req, res) => {
   }
 }
 
+const UpdateSchedule = async (req, res) => {
+  try {
+    const updatedSchedule = await Schedule.findByIdAndUpdate(
+      req.params.schedule_id,
+      //Check that this line works once front-end is ready to add an attraction to the schedule
+      { $push: { attractions: req.body.id } }
+    )
+    res.json(updatedSchedule)
+  } catch (error) {
+    throw error
+  }
+}
+
+const DeleteSchedule = async (req, res) => {
+  try {
+  } catch (error) {
+    throw error
+  }
+}
+
 module.exports = {
   GetSchedule,
-  CreateSchedule
+  GetOneSchedule,
+  CreateSchedule,
+  UpdateSchedule,
+  DeleteSchedule
 }
