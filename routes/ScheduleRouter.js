@@ -3,13 +3,14 @@ const controller = require('../controllers/ScheduleController')
 const middleware = require('../middleware')
 
 router.get('/', controller.GetSchedule)
+router.get('/:id')
 router.post(
   '/',
   middleware.stripToken,
   middleware.verifyToken,
   controller.CreateSchedule
 )
-// router.put('/:schedule_id', controller.UpdatePost)
-// router.delete('/:schedule_id', controller.DeletePost)
+router.put('/schedule_id', controller.UpdateSchedule)
+router.delete('/:schedule_id', controller.DeleteSchedule)
 
 module.exports = router
