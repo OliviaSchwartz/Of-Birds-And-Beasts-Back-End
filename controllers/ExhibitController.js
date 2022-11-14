@@ -11,7 +11,7 @@ const GetAllExhibits = async (req, res) => {
 
 const GetOneExhibit = async (req, res) => {
   try {
-    const exhibit = await Exhibits.findByPk(req.params.exhibit_Id)
+    const exhibit = await Exhibits.findByPk(req.params.id)
     res.send(exhibit)
   } catch (error) {
     throw error
