@@ -13,12 +13,10 @@ const GetSchedule = async (req, res) => {
 
 const CreateSchedule = async (req, res) => {
   try {
-    let patronId = parseInt(req.params.patron_Id)
-    let scheduleBody = {
-      patronId,
-      ...req.body
-    }
-    const schedule = await Schedules.create({ scheduleBody })
+    let { date } = req.body
+    let { patron_Id } = req.body
+    let newSchedule = { date: date, patron_Id: parseInt(patron_Id) }
+    const schedule = await Schedules.create(newSchedule)
     res.send(schedule)
   } catch (error) {
     throw error

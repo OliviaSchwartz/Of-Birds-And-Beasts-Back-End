@@ -13,10 +13,10 @@ module.exports = (sequelize, DataTypes) => {
         // as: 'schedule',
         foreignKey: 'patron_Id'
       })
-      Schedules.belongsToMany(models.Patrons, {
+      Schedules.belongsToMany(models.Exhibits, {
         as: 'schedules',
         through: models.Schedule_Exhibit,
-        foreignKey: 'patron_Id'
+        foreignKey: 'schedule_Id'
       })
     }
   }
