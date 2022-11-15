@@ -30,6 +30,7 @@ const CreateSchedule = async (req, res) => {
     }
     console.log(scheduleBody)
     let schedule = await Schedules.create(scheduleBody)
+
     res.send(schedule)
   } catch (error) {
     throw error
