@@ -19,7 +19,7 @@ module.exports = {
         type: Sequelize.TEXT
       },
       image: {
-        type: Sequelize.BLOB
+        type: Sequelize.STRING
       },
       exhibit_Id: {
         type: Sequelize.INTEGER,
