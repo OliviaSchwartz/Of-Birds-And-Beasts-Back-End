@@ -153,7 +153,7 @@ module.exports = {
         information:
           'Phoenicopterus is a genus of birds in the flamingo family Phoenicopteridae.',
         image:
-          '.https://images.pexels.com/photos/4371586/pexels-photo-4371586.jpeg?auto=compress&cs=tinysrgb&w=600',
+          'https://images.pexels.com/photos/4371586/pexels-photo-4371586.jpeg?auto=compress&cs=tinysrgb&w=600',
         exhibit_Id: 2,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -413,7 +413,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        name: 'king-cobra',
+        name: 'king cobra',
         species: 'Ophiophagus hannah',
         information:
           'Like most cobras and mambas, the king cobras threat display includes spreading its neck-flap, raising its head upright, puffing, and hissing.',
@@ -424,7 +424,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        name: 'pit-viper',
+        name: 'pit viper',
         species: 'The Crotalinae',
         information:
           'Like all other vipers, they are venomous. They are distinguished by the presence of a heat-sensing pit organ located between the eye and the nostril on both sides of the head.',
@@ -440,7 +440,7 @@ module.exports = {
         information:
           'a family of squamates with reduced or absent limbs, and are a type of gecko',
         image:
-          'https://static.wikia.nocookie.net/naturerules1/images/4/4d/Eastern_Glass_Lizard.jpg/revision/latest?cb=20220806151627',
+          'https://www.theanimalfacts.com/wp-content/uploads/2021/04/Burtons-Legless-Lizard-4.jpg',
         exhibit_Id: 5,
         createdAt: new Date(),
         updatedAt: new Date()

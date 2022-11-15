@@ -24,6 +24,7 @@ const CreateSchedule = async (req, res) => {
   try {
     let { date } = req.body
     let { patron_Id } = req.body
+    console.log(req.body)
     let newSchedule = { date: date, patron_Id: parseInt(patron_Id) }
     const schedule = await Schedules.create(newSchedule)
     res.send(schedule)
