@@ -5,7 +5,7 @@ const middleware = require('../middleware')
 router.get('/', controller.GetSchedule)
 router.get('/:id')
 router.post(
-  '/',
+  '/:id',
   middleware.stripToken,
   middleware.verifyToken,
   controller.CreateSchedule

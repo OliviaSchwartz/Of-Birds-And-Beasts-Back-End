@@ -1,4 +1,4 @@
-const { Schedules } = require('../models')
+const { Patrons, Schedules } = require('../models')
 const middleware = require('../middleware')
 const { Model } = require('sequelize')
 
@@ -22,15 +22,31 @@ const GetOneSchedule = async (req, res) => {
 
 const CreateSchedule = async (req, res) => {
   try {
-    let { date } = req.body
-    let { patron_Id } = req.body
-    let newSchedule = { date: date, patron_Id: parseInt(patron_Id) }
-    const schedule = await Schedules.create(newSchedule)
+    let patronId = parseInt(req.params.patron_Id)
+    console.log('this is patronID', patronId)
+    let scheduleBody = {
+      patronId,
+      ...req.body
+    }
+    console.log(scheduleBody)
+    let schedule = await Schedules.create(scheduleBody)
     res.send(schedule)
   } catch (error) {
     throw error
   }
 }
+
+// const CreateSchedule = async (req, res) => {
+//   try {
+//     let { date } = req.body
+//     let { patron_Id } = req.body
+//     let newSchedule = { date: date, patron_Id: patron_Id }
+//     const schedule = await Schedules.create(newSchedule)
+//     res.send(schedule)
+//   } catch (error) {
+//     throw error
+//   }
+// }
 
 const UpdateSchedule = async (req, res) => {
   try {
