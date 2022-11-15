@@ -484,7 +484,7 @@ module.exports = {
         information:
           'Komodo dragons are apex predators, and dominate the ecosystems in which they live. Komodo dragons hunt and ambush prey including invertebrates, birds, and mammals.',
         image:
-          'https://images.pexels.com/photos/12165174/pexels-photo-12165174.jpeg?auto=compress&cs=tinysrgb&w=600',
+          'https://images.pexels.com/photos/12165174/pexels-photo-12165174.jpeg?auto=compress&cs=tinysrgb&w=600e ',
         exhibit_Id: 5,
         createdAt: new Date(),
         updatedAt: new Date()
