@@ -20,6 +20,19 @@ const GetOneSchedule = async (req, res) => {
   }
 }
 
+const GetPatronSchedules = async (req, res) => {
+  try {
+    const schedules = await Schedules.findAll({
+      where: {
+        patron_Id: req.params.id
+      }
+    })
+    res.send(schedules)
+  } catch (error) {
+    throw error
+  }
+}
+
 const CreateSchedule = async (req, res) => {
   try {
     let patronId = parseInt(req.params.patron_Id)
@@ -33,34 +46,6 @@ const CreateSchedule = async (req, res) => {
     throw error
   }
 }
-
-// const CreateSchedule = async (req, res) => {
-//   try {
-//     let patronId = req.params.patron_Id
-//     console.log('this is patronID', patronId)
-//     let scheduleBody = {
-//       patronId,
-//       ...req.body
-//     }
-//     console.log(scheduleBody)
-//     let schedule = await Schedules.create(scheduleBody)
-//     res.send(schedule)
-//   } catch (error) {
-//     throw error
-//   }
-// }
-
-// const CreateSchedule = async (req, res) => {
-//   try {
-//     let { date } = req.body
-//     let { patron_Id } = req.body
-//     let newSchedule = { date: date, patron_Id: patron_Id }
-//     const schedule = await Schedules.create(newSchedule)
-//     res.send(schedule)
-//   } catch (error) {
-//     throw error
-//   }
-// }
 
 const UpdateSchedule = async (req, res) => {
   try {
@@ -85,6 +70,7 @@ const DeleteSchedule = async (req, res) => {
 module.exports = {
   GetSchedule,
   GetOneSchedule,
+  GetPatronSchedules,
   CreateSchedule,
   UpdateSchedule,
   DeleteSchedule
