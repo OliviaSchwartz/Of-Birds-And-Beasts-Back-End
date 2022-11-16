@@ -9,10 +9,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Schedules.belongsToMany(models.Patrons, {
+      Schedules.belongsTo(models.Patrons, {
+        // as: 'schedule',
+        foreignKey: 'patron_Id'
+      })
+      Schedules.belongsToMany(models.Exhibits, {
         as: 'schedules',
         through: models.Schedule_Exhibit,
-        foreignKey: 'patron_Id'
+        foreignKey: 'schedule_Id'
       })
     }
   }

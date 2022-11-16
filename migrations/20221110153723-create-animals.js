@@ -16,10 +16,18 @@ module.exports = {
         type: Sequelize.STRING
       },
       information: {
+        type: Sequelize.TEXT
+      },
+      image: {
         type: Sequelize.STRING
       },
       exhibit_Id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'exhibits',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,

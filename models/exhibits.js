@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Exhibits.hasMany(models.Animals, { foreignKey: 'exhibit_Id' })
-      Exhibits.belongsToMany(models.Schedule_Exhibit, {
+      Exhibits.belongsToMany(models.Schedules, {
         as: 'exhibits',
         through: models.Schedule_Exhibit,
         foreignKey: 'exhibit_Id'
@@ -25,9 +25,10 @@ module.exports = (sequelize, DataTypes) => {
         references: {
           model: 'schedule_exhibit',
           key: 'id'
-        },
-        name: DataTypes.STRING
-      }
+        }
+      },
+      name: DataTypes.STRING,
+      image: DataTypes.BLOB
     },
     {
       sequelize,

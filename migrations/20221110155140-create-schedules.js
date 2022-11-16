@@ -13,7 +13,12 @@ module.exports = {
         type: Sequelize.STRING
       },
       patron_Id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'patrons',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,

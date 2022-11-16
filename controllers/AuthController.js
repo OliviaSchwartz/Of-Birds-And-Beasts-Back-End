@@ -9,7 +9,10 @@ const Login = async (req, res) => {
     })
     if (
       patron &&
-      (await middleware.comparePassword(user.passwordDigest, req.body.password))
+      (await middleware.comparePassword(
+        patron.passwordDigest,
+        req.body.password
+      ))
     ) {
       let payload = {
         id: patron.id,
@@ -57,8 +60,15 @@ const UpdatePassword = async (req, res) => {
   }
 }
 
+const CheckSession = async (req, res) => {
+  console.log('in check session')
+  const { payload } = res.locals
+  res.send(payload)
+}
+
 module.exports = {
   Login,
   Register,
-  UpdatePassword
+  UpdatePassword,
+  CheckSession
 }
