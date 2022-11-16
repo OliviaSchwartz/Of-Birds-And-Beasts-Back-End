@@ -3,7 +3,7 @@ const controller = require('../controllers/ScheduleController')
 const middleware = require('../middleware')
 
 router.get('/', controller.GetSchedule)
-router.get('/:id', controller.GetOneSchedule)
+router.get('/:id', controller.GetPatronSchedules)
 router.post(
   '/:id',
   middleware.stripToken,
