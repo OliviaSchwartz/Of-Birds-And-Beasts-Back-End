@@ -19,7 +19,7 @@ const Login = async (req, res) => {
         email: patron.email
       }
       let token = middleware.createToken(payload)
-      return res.send({ patron: payload, token })
+      return res.send({ user: payload, token })
     }
     res.status(401).send({ status: 'Error', msg: 'Unauthorized' })
   } catch (error) {
