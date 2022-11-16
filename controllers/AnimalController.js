@@ -18,7 +18,22 @@ const GetOneAnimal = async (req, res) => {
   }
 }
 
+const GetAnimalType = async (req, res) => {
+  console.log('this is the thing', req.params)
+  try {
+    const animals = await Animals.findAll({
+      where: {
+        exhibit_Id: req.params.id
+      }
+    })
+    res.send(animals)
+  } catch (error) {
+    throw error
+  }
+}
+
 module.exports = {
   GetAllAnimals,
-  GetOneAnimal
+  GetOneAnimal,
+  GetAnimalType
 }
