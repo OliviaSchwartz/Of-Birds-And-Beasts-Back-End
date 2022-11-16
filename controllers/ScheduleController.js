@@ -23,18 +23,32 @@ const GetOneSchedule = async (req, res) => {
 const CreateSchedule = async (req, res) => {
   try {
     let patronId = parseInt(req.params.patron_Id)
-    console.log('this is patronID', patronId)
-    let scheduleBody = {
+    let scheduleContent = {
       patronId,
       ...req.body
     }
-    console.log(scheduleBody)
-    let schedule = await Schedules.create(scheduleBody)
+    let schedule = await Schedules.create(scheduleContent)
     res.send(schedule)
   } catch (error) {
     throw error
   }
 }
+
+// const CreateSchedule = async (req, res) => {
+//   try {
+//     let patronId = req.params.patron_Id
+//     console.log('this is patronID', patronId)
+//     let scheduleBody = {
+//       patronId,
+//       ...req.body
+//     }
+//     console.log(scheduleBody)
+//     let schedule = await Schedules.create(scheduleBody)
+//     res.send(schedule)
+//   } catch (error) {
+//     throw error
+//   }
+// }
 
 // const CreateSchedule = async (req, res) => {
 //   try {
