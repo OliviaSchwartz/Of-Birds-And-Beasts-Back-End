@@ -10,7 +10,7 @@ router.post(
   middleware.verifyToken,
   controller.CreateSchedule
 )
-router.put('/schedule_id', controller.UpdateSchedule)
-router.delete('/:id', controller.DeleteSchedule)
+router.put('/:schedule_Id', controller.UpdateSchedule)
+router.delete('/:schedule_Id', controller.DeleteSchedule)
 
 module.exports = router
