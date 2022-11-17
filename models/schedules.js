@@ -30,10 +30,6 @@ module.exports = (sequelize, DataTypes) => {
           model: 'patrons',
           key: 'id'
         }
-      },
-      exhibits: {
-        type: DataTypes.ARRAY(DataTypes.STRING),
-        defaultValue: []
       }
     },
     {
