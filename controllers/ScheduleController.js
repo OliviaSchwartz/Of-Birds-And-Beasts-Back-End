@@ -55,7 +55,6 @@ const CreateSchedule = async (req, res) => {
 const UpdateSchedule = async (req, res) => {
   try {
     let scheduleId = parseInt(req.params.schedule_Id)
-    console.log(req.params)
     let newSchedule = await Schedules.update(req.body, {
       where: { id: scheduleId }
     })
