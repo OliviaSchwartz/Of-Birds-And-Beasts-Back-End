@@ -49,10 +49,10 @@ const CreateSchedule = async (req, res) => {
 
 const UpdateSchedule = async (req, res) => {
   try {
-    const updatedSchedule = await Schedule.findByIdAndUpdate(
+    const updatedSchedule = await Schedules.findByIdAndUpdate(
       req.params.schedule_id,
       //Check that this line works once front-end is ready to add an attraction to the schedule
-      { $push: { attractions: req.body.id } }
+      { $push: { exhibits: req.body.id } }
     )
     res.json(updatedSchedule)
   } catch (error) {
@@ -62,6 +62,9 @@ const UpdateSchedule = async (req, res) => {
 
 const DeleteSchedule = async (req, res) => {
   try {
+    const deletedSchedule = parseInt(req.params.schedule_Id)
+    await Schedules.destroy({ where: { id: deletedSchedule } })
+    res.send({ message: `Deleted schedule with an id of ${deletedSchedule}` })
   } catch (error) {
     throw error
   }
