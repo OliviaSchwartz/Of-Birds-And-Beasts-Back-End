@@ -20,6 +20,11 @@ module.exports = {
           key: 'id'
         }
       },
+      exhibits: {
+        type: Sequelize.ARRAY(Sequelize.STRING),
+        defaultValue: [],
+        allowNull: true
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
