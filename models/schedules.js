@@ -30,7 +30,8 @@ module.exports = (sequelize, DataTypes) => {
           model: 'patrons',
           key: 'id'
         }
-      }
+      },
+      exhibit_list: DataTypes.STRING
     },
     {
       sequelize,
