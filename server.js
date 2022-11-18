@@ -8,7 +8,6 @@ const ExhibitRouter = require('./routes/ExhibitRouter')
 const AnimalRouter = require('./routes/AnimalRouter')
 const app = express()
 
-// const AppRouter = require('./routes/AppRouter')
 
 const PORT = process.env.PORT || 3001
 
@@ -22,5 +21,5 @@ app.use('/exhibit', ExhibitRouter)
 app.use('/animal', AnimalRouter)
 
 app.get('/', (req, res) => res.json({ message: 'Server Works' }))
-// app.use('/api', AppRouter)
+
 app.listen(PORT, () => console.log(`Server Started On Port: ${PORT}`))
