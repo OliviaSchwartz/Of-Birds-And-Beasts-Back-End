@@ -24,6 +24,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
+      exhibit_list: {
+        allowNull: true,
+        type: Sequelize.STRING
+      },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
